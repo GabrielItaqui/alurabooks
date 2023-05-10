@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container">
+            <input type="checkbox" id="menu" class="container__botao">
+            <label for="menu">
+                <span class="cabecalho__menu-hamburguer container__imagem"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__titulo">Categorias</li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Programação</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Front-End</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Infraestrutura</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Business</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="#" class="lista-menu__link">Design & UX</a>
+                </li>
+            </ul>
+            <img src="./Assets/Logo.svg" alt="" class="container__imagem">
+        </div>
+        <div class="container">  
+            <a href="#"><img src="./Assets/Favoritos.svg" alt="" class="container__imagem"></a>
+            <a href="#"><img src="./Assets/Compras.svg" alt="" class="container__imagem"></a>
+            <a href="#"><img src="./Assets/Usuário.svg" alt="" class="container__imagem"></a>
+        </div>
+    </header>
+    <section class="banner">
+        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+        <p class="banner__texto">Encontre em nossa estante o que precisa para o seu desenvolvimento!</p>
+        <input type="search" class="banner__pesquisa" placeholder="Qual será a sua próxima leitura?">
+    </section>
+    <section class="carrossel">
+        <h2 class="carrossel__titulo">Novos Lançamentos</h2>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <div class="swiper-pagination"></div>
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="./Assets/ApacheKafka.png" alt="Livro de Apache Kafka"></div>
+                <div class="swiper-slide"><img src="./Assets/Liderança.png" alt="Livro sobre Liderança"></div>
+                <div class="swiper-slide"><img src="./Assets/Javascript.png" alt="Livro sobre /JavaScript"></div>
+                <div class="swiper-slide"><img src="./Assets/Guia Front-end.png" alt="Livro sobre Guia Front-End"></div>
+                <div class="swiper-slide"><img src="./Assets/Portugol.png" alt="Livro sobre Portugol"></div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+        <div class="card">
+            <div class="card__descricao">
+                <div class="descricao">
+                    <h3 class="descricao__titulo">Talvez você possa se interessar por...</h3>
+                    <h3 class="descricao__titulo-livro">Angular 11 e Firebase</h3>
+                    <p class="descricao__texto">Contruindo uma aplicação integrada com a plataforma do Google</p>
+                </div>
+                <img src="./Assets/Angular-1.png" alt="Livro Angular" class="descricao__imagem">
+            </div>
+            <div class="card__botoes">
+                <ul class="botoes">
+                    <li class="botoes__item"><img src="./Assets/Favoritos.svg" alt=""></li>
+                    <li class="botoes__item"><img src="./Assets/Compras.svg" alt=""></li>
+                </ul>
+                <a href="#" class="botoes__ancora">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 3,
+        speedBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        },
+    });
+</script>
+</body>
+</html>
