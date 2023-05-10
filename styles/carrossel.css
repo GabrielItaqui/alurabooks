@@ -44,8 +44,11 @@
     margin: 0 0.5em;
 }
 .botoes__ancora {
-    padding: 15px;
     background-color: var(--laranja);
+    padding: 1em 2.2em;
+    font-weight: 700;
+    color: var(--branco);
+    text-decoration: none;
 }
 .descricao__titulo {
     color: var(--laranja);
